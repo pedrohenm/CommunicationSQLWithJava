@@ -20,4 +20,10 @@ CREATE TABLE Carro
 
 ALTER TABLE Carro
 ADD CONSTRAINT fk_PesCarro FOREIGN KEY (ID_Pessoa) REFERENCES Pessoa (ID_Pessoa)
+
+select Pessoa.Nome as pessoaName, Pessoa.Cidade, Pessoa.Endereco,
+Carro.Marca, Carro.Nome as carroName, Pessoa.ID_Pessoa 
+from Pessoa 
+inner join Carro
+on Pessoa.ID_Pessoa = Carro.ID_Pessoa
 ```
